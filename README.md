@@ -1,7 +1,7 @@
 <h1 align="center">TensorMask</h1>
 
-## Discription:
-This paper presents a GPU-accelerated real-time facemask detection system using the MobileNetV2 architecture. The proposed system utilizes the power of parallel processing on the GPU to improve the detection speed of facemasks in 
+## Description:
+This [paper](https://github.com/Rupeshwaran-Ravindrran/TensorMask/blob/master/Report_Paper.pdf) presents a GPU-accelerated real-time facemask detection system using the MobileNetV2 architecture. The proposed system utilizes the power of parallel processing on the GPU to improve the detection speed of facemasks in 
 real-time video streams. The MobileNetV2 architecture is selected for its high accuracy and small model size, making it ideal for deployment on mobile devices and embedded systems. The system is trained on a large dataset of facemask 
 images and non-facemask images using transfer learning. The experimental results show that the proposed system achieves a high detection accuracy of 95% and a fast-processing speed of 60 frames per second on a NVIDIA RTX 3060 GPU. 
 The system can be easily integrated into existing security systems or used to enforce face mask compliance in public places. The proposed system provides an efficient solution for real-time facemask detection with potential applications in public health and safety.
