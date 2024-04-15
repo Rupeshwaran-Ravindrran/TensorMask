@@ -68,10 +68,11 @@ $ python3 detect_mask_video.py
 ```
 ## Results
 
-### After training the MobileNetV2 on the dataset with 20 epochs, it was tested on the testing dataset to acquire an accuracy of over 98%. which indicates that the model is very effective in distinguishing between masked and unmasked faces.
+After training the MobileNetV2 on the dataset with 20 epochs, it was tested on the testing dataset to acquire an accuracy of over 98%. which indicates that the model is very effective in distinguishing between masked and unmasked faces.
 
-![Confusion_matrix](https://github.com/Rupeshwaran-Ravindrran/TensorMask/assets/79376089/811dd4b0-8563-411b-adb3-6857ab357556)
-
+<p align="center">
+  <img src="https://github.com/Rupeshwaran-Ravindrran/TensorMask/assets/79376089/811dd4b0-8563-411b-adb3-6857ab357556" alt="GIF" width="500px">
+</p>
 
 Precision is the measure of how many of the predicted positive (with_mask or without_mask) cases were actu-ally positive. In this case, the precision for the "with_mask" class is 0.99, meaning that 99% of the pre-dicted cases of with_mask was actually with_mask. Similarly, the precision for the "without_mask" class is 0.97, meaning that 97% of the predicted cases of with-out_mask was actually without_mask.
 
@@ -81,12 +82,13 @@ Recall is the measure of how many of the actual posi-tive (with_mask or without_
 
 The macro avg and weighted avg provide an overall per-formance metric for the model, considering the perfor-mance for each class and the number of samples in each class. In this case, both macro avg and weighted avg F1-score and accuracy are 0.98, indicating that the model has performed well overall on the face mask detection task.
 
-### Real time performance of the model is evaluated on testing it on a live video source, where we observed the following: 
+Real time performance of the model is evaluated on testing it on a live video source, where we observed the following: 
 
-![Latency](https://github.com/Rupeshwaran-Ravindrran/TensorMask/assets/79376089/9640f729-d38d-4c8b-89ee-157a2029e5ff)
+<p align="center">
+  <img src="https://github.com/Rupeshwaran-Ravindrran/TensorMask/assets/79376089/9640f729-d38d-4c8b-89ee-157a2029e5ff" alt="GIF" width="500px">
+</p>
 
 In the case of the mobilenetsv2 model for face mask de-tection, the end-to-end latency on the CPU and GPU are 280ms and 28ms, respectively. This difference in per-formance is primarily due to the parallel processing ca-pabilities of the GPU, which can process multiple inputs simultaneously. Our implementation is about 10 times quicker than the reference in this scenario.
-
 
 ---
 
