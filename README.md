@@ -120,4 +120,9 @@ In the case of the mobilenetsv2 model for face mask de-tection, the end-to-end l
 
 ---
 
+## License
+
+This project is licensed under the [MIT License](LICENSE), allowing for open collaboration and usage.
+
+
 
