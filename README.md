@@ -68,14 +68,25 @@ $ python3 detect_mask_video.py
 ```
 ## Results
 
-#### Our model gave 98% accuracy for Face Mask Detection after training via <code>tensorflow-gpu==2.5.0</code>
+### After training the MobileNetV2 on the dataset with 20 epochs, it was tested on the testing dataset to acquire an accuracy of over 98%. which indicates that the model is very effective in distinguishing between masked and unmasked faces.
 
-<a href="https://colab.research.google.com/drive/1AZ0W2QAHnM3rcj0qbTmc7c3fAMPCowQ1?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-####          
-![](https://github.com/chandrikadeb7/Face-Mask-Detection/blob/master/Readme_images/Screenshot%202020-06-01%20at%209.48.27%20PM.png)
+![Confusion_matrix](https://github.com/Rupeshwaran-Ravindrran/TensorMask/assets/79376089/811dd4b0-8563-411b-adb3-6857ab357556)
 
-#### We got the following accuracy/loss training curve plot
-![](https://github.com/chandrikadeb7/Face-Mask-Detection/blob/master/plot.png)
+
+Precision is the measure of how many of the predicted positive (with_mask or without_mask) cases were actu-ally positive. In this case, the precision for the "with_mask" class is 0.99, meaning that 99% of the pre-dicted cases of with_mask was actually with_mask. Similarly, the precision for the "without_mask" class is 0.97, meaning that 97% of the predicted cases of with-out_mask was actually without_mask.
+
+Recall is the measure of how many of the actual posi-tive (with_mask or without_mask) cases were correctly predicted by the model. In this case, the recall for the "with_mask" class is 0.96, meaning that 96% of the ac-tual cases of with_mask was correctly predicted by the model. Similarly, the recall for the "without_mask" class is 0.99, meaning that 99% of the actual cases of without_mask was correctly predicted by the model.
+
+ F1-score is a measure of the balance between precision and recall, considering both metrics to provide an over-all performance score for each class. In this case, the F1-score for both classes are 0.98, indicating that the model has a good balance between precision and recall for both classes. The support column indicates the number of samples in each class. In this case, there are 1177 samples of with_mask and 1182 samples of with-out_mask in the testing dataset. The accuracy of the model is 0.98, meaning that it correctly predicted the class of 98% of the samples in the testing dataset. 
+
+The macro avg and weighted avg provide an overall per-formance metric for the model, considering the perfor-mance for each class and the number of samples in each class. In this case, both macro avg and weighted avg F1-score and accuracy are 0.98, indicating that the model has performed well overall on the face mask detection task.
+
+### Real time performance of the model is evaluated on testing it on a live video source, where we observed the following: 
+
+![Latency](https://github.com/Rupeshwaran-Ravindrran/TensorMask/assets/79376089/9640f729-d38d-4c8b-89ee-157a2029e5ff)
+
+In the case of the mobilenetsv2 model for face mask de-tection, the end-to-end latency on the CPU and GPU are 280ms and 28ms, respectively. This difference in per-formance is primarily due to the parallel processing ca-pabilities of the GPU, which can process multiple inputs simultaneously. Our implementation is about 10 times quicker than the reference in this scenario.
+
 
 ---
 
